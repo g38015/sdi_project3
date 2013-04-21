@@ -1,5 +1,5 @@
 // alert("JavaScript works!");
-// Github https://github.com/g38015/sdi_project2
+// Github https://github.com/g38015/sdi_project3
 // Peter Hitchcock
 // SDI 1304
 // April 21, 2013
