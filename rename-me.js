@@ -9,6 +9,20 @@
 var skiDecision = "we need to check how many inches and see if the roads are clear to decide where we are going to ski today.";
 var slopes = ["The Wall", " Sentinal Bowl", " Cornice"];
 
+// JSON
+var skierInfo = {
+    "skiers":   [
+      {
+        "skierFirstName": "Peter",
+        "skierLastName": "Hitchcock"
+      },
+      {
+        "skierFirstName": "Ellie",
+        "skierLastName": "Ruiz-Hitchcock"
+      }
+    ]
+};
+
 
 // Object Did it Snow (refactored from main variables, proceedure function and bool function)
 var didItSnow = {
@@ -52,7 +66,7 @@ var didItSnow = {
       return totalSnow;
     },
 
-    makeSnow: function(moreSnow){
+    makeSnow: function(moreSnow){ // Method: Mutator
       this.snowInches = moreSnow;
     }
 }
@@ -90,13 +104,14 @@ var howMuchDidItSnow = {
 
 
 // Main Code
+console.log(skierInfo.skiers[1].skierFirstName + " and " + skierInfo.skiers[0].skierFirstName + " Have decided to go skiing today. Let's check if it snowed."); //JSON
 didItSnow.snow(true); //Method Procedure
 var newSnow = howMuchDidItSnow.howMuchSnow(15); //Number Function
 console.log("With " + newSnow + " inches of new snow,");
 var areWeReady = didItSnow.snowedRoadsClear(true, true); //Method Function
-console.log("The total snow for the past 2 days is " + didItSnow.lotsOfSnow());
+console.log("The total snow for the past 2 days is " + didItSnow.lotsOfSnow() + " inches.");
 didItSnow.makeSnow(21);
-console.log("The new snow amount is " + didItSnow.lotsOfSnow());
+console.log("The new snow amount is " + didItSnow.lotsOfSnow() + " inches.");
 console.log("It helped us make a decision knowing that it is " + areWeReady + " that the roads are clear " + didItSnow.ski);
 var readyToSki = howMuchDidItSnow.getReady("Salomon", "Rossignol"); //String Function
 console.log(readyToSki);
