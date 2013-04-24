@@ -5,13 +5,15 @@
 // April 21, 2013
 // Project 3
 
-// Start Global Variables
+// Global Variables
+var checkForSnow =true;
+var skiDecision = "we need to check how many inches and see if the roads are clear to decide where we are going to ski today.";
 var slopes = ["The Wall", " Sentinal Bowl", " Cornice"];
+
+
 // Object Did it Snow (refactored from main variables, proceedure function and bool function)
 var didItSnow = {
 
-    skiDecision: "we need to check how many inches and see if the roads are clear to decide where we are going to ski today.",
-    checkForSnow: true,
     snowInches: 10,
     slopes: [
             "The Wall", 
@@ -42,6 +44,7 @@ var didItSnow = {
 
     }
 }
+
 // Object howMuchDidItSnow (code refactored from number func, string func, and array func)
 var howMuchDidItSnow = {
     howMuchSnow: function(snowToday) {
@@ -75,7 +78,7 @@ var howMuchDidItSnow = {
 
 
 // Main Code
-didItSnow.snow(); //Method Procedure
+didItSnow.snow(true); //Method Procedure
 var newSnow = howMuchDidItSnow.howMuchSnow(15); //Number Function
 console.log("With " + newSnow + " inches of new snow,");
 var areWeReady = didItSnow.snowedRoadsClear(true, true); //Method Function
