@@ -7,19 +7,28 @@
 
 // Start
 
-// Global Variables Sting, Number, Array
-/*
-var skiDecision = "we need to check how many inches and see if the roads are clear to decide where we are going to ski today.",
-    snowInches = 10,
-    slopes = ["The Wall", " Sentinal Bowl", " Cornice"];
-*/
-
 // Object Did it Snow (refactored)
 var didItSnow = {
+
+    skiDecision: "we need to check how many inches and see if the roads are clear to decide where we are going to ski today.",
     checkForSnow: true,
     snowInches: 10,
-    slopes: ["The Wall", " Sentinal Bowl", " Cornice"],
-    snow: function (checkForSnow) {},
+    slopes: [
+            "The Wall", 
+            " Sentinal Bowl", 
+            " Cornice"
+            ],
+    snow: function (checkForSnow) { // Method: Proceedure 
+      if (checkForSnow === true)
+      {
+        console.log("Awesome! It Snowed, " + skiDecision);
+      }
+      else
+      {
+        console.log("Since it did not snow let's get ready to head to Sierra.");
+      }
+
+    }
 }
 
 // Procedure Function
@@ -37,8 +46,8 @@ var didItSnow = function(checkForSnow) {
 };
 */
  // Procedure Method
- didItSnow.snow 
-
+ 
+/*
 // Boolean Function
 var snowedRoadsClear = function(snowed, roadClear) {
     if (snowed === true || (snowed && roadClear === true))
@@ -80,9 +89,9 @@ var skiRuns = function(numberOfRuns, slopeNames) {
     }
     return slopeNames; 
 };
-
+*/
 // Main 
-didItSnow.snow; //procedure
+didItSnow.snow(); //procedure
 var newSnow = didItSnow.snowInches; //number
 console.log("With " + didItSnow.snowInches + " inches of new snow,");
 /* var areWeReady = snowedRoadsClear(true, true); //boolean
