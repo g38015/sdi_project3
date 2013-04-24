@@ -6,7 +6,6 @@
 // Project 3
 
 // Global Variables
-var checkForSnow =true;
 var skiDecision = "we need to check how many inches and see if the roads are clear to decide where we are going to ski today.";
 var slopes = ["The Wall", " Sentinal Bowl", " Cornice"];
 
@@ -14,12 +13,16 @@ var slopes = ["The Wall", " Sentinal Bowl", " Cornice"];
 // Object Did it Snow (refactored from main variables, proceedure function and bool function)
 var didItSnow = {
 
+    ski: "and we can get to the slopes safely.",
+    checkForSnow: true,
     snowInches: 10,
+    yesterdaySnow: 12,
     slopes: [
             "The Wall", 
             " Sentinal Bowl", 
             " Cornice"
             ],
+
     snow: function (checkForSnow) { // Method: Procedure 
       if (checkForSnow === true)
       {
@@ -42,6 +45,15 @@ var didItSnow = {
       }
       return roadClear;
 
+    },
+
+    lotsOfSnow: function(){ // Method: Accessor
+      var totalSnow = this.snowInches + this.yesterdaySnow;
+      return totalSnow;
+    },
+
+    makeSnow: function(moreSnow){
+      this.snowInches = moreSnow;
     }
 }
 
@@ -82,7 +94,8 @@ didItSnow.snow(true); //Method Procedure
 var newSnow = howMuchDidItSnow.howMuchSnow(15); //Number Function
 console.log("With " + newSnow + " inches of new snow,");
 var areWeReady = didItSnow.snowedRoadsClear(true, true); //Method Function
-console.log("It helped us make a decision knowing that it is " + areWeReady + " that the roads are clear.");
+console.log("The total snow for the past 2 days is " + didItSnow.lotsOfSnow())
+console.log("It helped us make a decision knowing that it is " + areWeReady + " that the roads are clear " + didItSnow.ski);
 var readyToSki = howMuchDidItSnow.getReady("Salomon", "Rossignol"); //String Function
 console.log(readyToSki);
 var decideRuns = howMuchDidItSnow.skiRuns(8, slopes); //Array Function
