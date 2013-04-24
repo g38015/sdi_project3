@@ -43,6 +43,21 @@ var didItSnow = {
     }
 }
 
+var howMuchDidItSnow = {
+    howMuchSnow: function(snowToday) {
+    for (var inches = 1; inches <= snowToday; inches = inches + 1) {
+      if (inches < snowToday) {
+        console.log("This is crazy! We now have " + inches + " inches of new snow to ski on.")
+      } else {
+        console.log("Cool! Time to pack up the car.")
+      }
+    }
+    return snowToday;
+  }
+
+
+}
+
  
 /*
 // Number Function
@@ -76,8 +91,8 @@ var skiRuns = function(numberOfRuns, slopeNames) {
 */
 // Main 
 didItSnow.snow(); //Method Procedure
-var newSnow = didItSnow.snowInches; //number
-console.log("With " + didItSnow.snowInches + " inches of new snow,");
+var newSnow = howMuchDidItSnow.howMuchSnow(15); //number
+console.log("With " + newSnow + " inches of new snow,");
 var areWeReady = didItSnow.snowedRoadsClear(true, true); //Method Function
 console.log("It helped us make a decision knowing that it is " + areWeReady + " that the roads are clear.");
 /*
