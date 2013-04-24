@@ -48,6 +48,7 @@ var didItSnow = {
       }
 
     },
+
     snowedRoadsClear: function(snowed, roadClear) { // Method: Function
       if (snowed === true || (snowed && roadClear === true))
       {
@@ -73,7 +74,8 @@ var didItSnow = {
 
 // Object howMuchDidItSnow (code refactored from number func, string func, and array func)
 var howMuchDidItSnow = {
-    howMuchSnow: function(snowToday) {
+
+  howMuchSnow: function(snowToday) {
     for (var inches = 1; inches <= snowToday; inches = inches + 1) {
       if (inches < snowToday) {
         console.log("This is crazy! We now have " + inches + " inches of new snow to ski on.")
@@ -99,22 +101,21 @@ var howMuchDidItSnow = {
     return slopeNames; 
   }
 
-
 }
 
 
 // Main Code
 console.log(skierInfo.skiers[1].skierFirstName + " and " + skierInfo.skiers[0].skierFirstName + " Have decided to go skiing today. Let's check if it snowed."); //JSON
 didItSnow.snow(true); //Method Procedure
-var newSnow = howMuchDidItSnow.howMuchSnow(15); //Number Function
+var newSnow = howMuchDidItSnow.howMuchSnow(15); //Number
 console.log("With " + newSnow + " inches of new snow,");
 var areWeReady = didItSnow.snowedRoadsClear(true, true); //Method Function
-console.log("The total snow for the past 2 days is " + didItSnow.lotsOfSnow() + " inches.");
-didItSnow.makeSnow(21);
+console.log("The total snow for the past 2 days is " + didItSnow.lotsOfSnow() + " inches."); // Method Accessor
+didItSnow.makeSnow(21); //Method Mutator
 console.log("The new snow amount is " + didItSnow.lotsOfSnow() + " inches.");
 console.log("It helped us make a decision knowing that it is " + areWeReady + " that the roads are clear " + didItSnow.ski);
-var readyToSki = howMuchDidItSnow.getReady("Salomon", "Rossignol"); //String Function
+var readyToSki = howMuchDidItSnow.getReady("Salomon", "Rossignol"); //String
 console.log(readyToSki);
-var decideRuns = howMuchDidItSnow.skiRuns(8, slopes); //Array Function
+var decideRuns = howMuchDidItSnow.skiRuns(8, slopes); //Array
 console.log("Didn't quite finish our day. We added some extra runs including" + decideRuns[3] + " so we ended up missing " + decideRuns.length + " runs. Let's come back tomorrow:) and finish the remaining runs " + decideRuns + ".");
 
