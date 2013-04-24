@@ -29,35 +29,22 @@ var didItSnow = {
       }
 
     },
-    snowedRoadsClear: function(snowed, roadClear) {
+    snowedRoadsClear: function(snowed, roadClear) { // Method: Function
       if (snowed === true || (snowed && roadClear === true))
-    {
-      console.log("Let's head to Kirkwood.");
-    }
-    else
-    {
-      console.log("Let's go to Sierra for the day.");
-    }
-    return roadClear;
+      {
+        console.log("Let's head to Kirkwood.");
+      }
+      else
+      {
+        console.log("Let's go to Sierra for the day.");
+      }
+      return roadClear;
 
     }
 }
 
  
 /*
-// Boolean Function
-var snowedRoadsClear = function(snowed, roadClear) {
-    if (snowed === true || (snowed && roadClear === true))
-    {
-      console.log("Let's head to Kirkwood.");
-    }
-    else
-    {
-      console.log("Let's go to Sierra for the day.");
-    }
-    return roadClear;
-};
-
 // Number Function
 var howMuchSnow = function(snowToday) {
     for (var inches = 1; inches <= snowToday; inches = inches + 1) {
@@ -88,10 +75,10 @@ var skiRuns = function(numberOfRuns, slopeNames) {
 };
 */
 // Main 
-didItSnow.snow(); //procedure
+didItSnow.snow(); //Method Procedure
 var newSnow = didItSnow.snowInches; //number
 console.log("With " + didItSnow.snowInches + " inches of new snow,");
-var areWeReady = didItSnow.snowedRoadsClear(true, true); //boolean
+var areWeReady = didItSnow.snowedRoadsClear(true, true); //Method Function
 console.log("It helped us make a decision knowing that it is " + areWeReady + " that the roads are clear.");
 /*
 var readyToSki = getReady("Salomon", "Rossignol"); //string
