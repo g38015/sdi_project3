@@ -89,9 +89,9 @@ var newSnow = howMuchDidItSnow.howMuchSnow(15); //number
 console.log("With " + newSnow + " inches of new snow,");
 var areWeReady = didItSnow.snowedRoadsClear(true, true); //Method Function
 console.log("It helped us make a decision knowing that it is " + areWeReady + " that the roads are clear.");
-/*
-var readyToSki = getReady("Salomon", "Rossignol"); //string
+var readyToSki = howMuchDidItSnow.getReady("Salomon", "Rossignol"); //string
 console.log(readyToSki);
+/*
 var decideRuns = skiRuns(8, slopes); //array
 console.log("Didn't quite finish our day. We added some extra runs including" + decideRuns[3] + " so we ended up missing " + decideRuns.length + " runs. Let's come back tomorrow:) and finish the remaining runs " + decideRuns + ".");
 */
