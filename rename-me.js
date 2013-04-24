@@ -53,6 +53,11 @@ var howMuchDidItSnow = {
       }
     }
     return snowToday;
+  },
+
+  getReady: function(grabBoots, grabSkis) {
+    var skiEquipment = "I am ready to start skiing, putting on my " + grabBoots + " boots and my " + grabSkis + " skis, let's get it on!";
+    return skiEquipment;    
   }
 
 
@@ -60,17 +65,6 @@ var howMuchDidItSnow = {
 
  
 /*
-// Number Function
-var howMuchSnow = function(snowToday) {
-    for (var inches = 1; inches <= snowToday; inches = inches + 1) {
-      if (inches < snowToday) {
-        console.log("This is crazy! We now have " + inches + " inches of new snow to ski on.")
-      } else {
-        console.log("Cool! Time to pack up the car.")
-      }
-    }
-    return snowToday;
-};
 
 // String Function
 var getReady = function(grabBoots, grabSkis) {
