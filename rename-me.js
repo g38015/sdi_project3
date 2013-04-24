@@ -18,7 +18,7 @@ var didItSnow = {
             " Sentinal Bowl", 
             " Cornice"
             ],
-    snow: function (checkForSnow) { // Method: Proceedure 
+    snow: function (checkForSnow) { // Method: Procedure 
       if (checkForSnow === true)
       {
         console.log("Awesome! It Snowed, " + skiDecision);
@@ -28,24 +28,21 @@ var didItSnow = {
         console.log("Since it did not snow let's get ready to head to Sierra.");
       }
 
-    }
-}
-
-// Procedure Function
-/*
-var didItSnow = function(checkForSnow) {
-    
-    if (checkForSnow === true)
+    },
+    snowedRoadsClear: function(snowed, roadClear) {
+      if (snowed === true || (snowed && roadClear === true))
     {
-      console.log("Awesome! It Snowed, " + skiDecision);
+      console.log("Let's head to Kirkwood.");
     }
     else
     {
-      console.log("Since it did not snow let's get ready to head to Sierra.");
+      console.log("Let's go to Sierra for the day.");
     }
-};
-*/
- // Procedure Method
+    return roadClear;
+
+    }
+}
+
  
 /*
 // Boolean Function
@@ -94,8 +91,9 @@ var skiRuns = function(numberOfRuns, slopeNames) {
 didItSnow.snow(); //procedure
 var newSnow = didItSnow.snowInches; //number
 console.log("With " + didItSnow.snowInches + " inches of new snow,");
-/* var areWeReady = snowedRoadsClear(true, true); //boolean
+var areWeReady = didItSnow.snowedRoadsClear(true, true); //boolean
 console.log("It helped us make a decision knowing that it is " + areWeReady + " that the roads are clear.");
+/*
 var readyToSki = getReady("Salomon", "Rossignol"); //string
 console.log(readyToSki);
 var decideRuns = skiRuns(8, slopes); //array
