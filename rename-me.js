@@ -5,9 +5,9 @@
 // April 21, 2013
 // Project 3
 
-// Start
-
-// Object Did it Snow (refactored)
+// Start Global Variables
+var slopes = ["The Wall", " Sentinal Bowl", " Cornice"];
+// Object Did it Snow (refactored from main variables, proceedure function and bool function)
 var didItSnow = {
 
     skiDecision: "we need to check how many inches and see if the roads are clear to decide where we are going to ski today.",
@@ -42,7 +42,7 @@ var didItSnow = {
 
     }
 }
-
+// Object howMuchDidItSnow (code refactored from number func, string func, and array func)
 var howMuchDidItSnow = {
     howMuchSnow: function(snowToday) {
     for (var inches = 1; inches <= snowToday; inches = inches + 1) {
@@ -58,22 +58,9 @@ var howMuchDidItSnow = {
   getReady: function(grabBoots, grabSkis) {
     var skiEquipment = "I am ready to start skiing, putting on my " + grabBoots + " boots and my " + grabSkis + " skis, let's get it on!";
     return skiEquipment;    
-  }
+  },
 
-
-}
-
- 
-/*
-
-// String Function
-var getReady = function(grabBoots, grabSkis) {
-    var skiEquipment = "I am ready to start skiing, putting on my " + grabBoots + " boots and my " + grabSkis + " skis, let's get it on!";
-    return skiEquipment;    
-};
-
-// Array Function
-var skiRuns = function(numberOfRuns, slopeNames) {
+  skiRuns: function(numberOfRuns, slopeNames) {
     var runs = numberOfRuns;
     var addRun = slopeNames.push(" Lightning")
     while (runs > slopeNames.length ) {
@@ -81,8 +68,12 @@ var skiRuns = function(numberOfRuns, slopeNames) {
       runs--; 
     }
     return slopeNames; 
-};
-*/
+  }
+
+
+}
+
+
 // Main 
 didItSnow.snow(); //Method Procedure
 var newSnow = howMuchDidItSnow.howMuchSnow(15); //number
@@ -91,7 +82,6 @@ var areWeReady = didItSnow.snowedRoadsClear(true, true); //Method Function
 console.log("It helped us make a decision knowing that it is " + areWeReady + " that the roads are clear.");
 var readyToSki = howMuchDidItSnow.getReady("Salomon", "Rossignol"); //string
 console.log(readyToSki);
-/*
-var decideRuns = skiRuns(8, slopes); //array
+var decideRuns = howMuchDidItSnow.skiRuns(8, slopes); //array
 console.log("Didn't quite finish our day. We added some extra runs including" + decideRuns[3] + " so we ended up missing " + decideRuns.length + " runs. Let's come back tomorrow:) and finish the remaining runs " + decideRuns + ".");
-*/
+
