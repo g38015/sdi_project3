@@ -21,11 +21,15 @@ var skierInfo = {
     "skiers":   [
       {
         "skierFirstName": "Peter",
-        "skierLastName": "Hitchcock"
+        "skierLastName": "Hitchcock",
+        "advanced": true,
+        "liftTicket": 10
       },
       {
         "skierFirstName": "Ellie",
-        "skierLastName": "Ruiz-Hitchcock"
+        "skierLastName": "Ruiz-Hitchcock",
+        "advanced": true,
+        "liftTicket": 9
       }
     ]
 };
