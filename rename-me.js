@@ -108,9 +108,10 @@ var howMuchDidItSnow = {
     return slopeNames; 
   },
 
-  resorts: function(resortObject) {
+  resorts: function(resortObject, resortJson) {
     var resort = resortObject;
-    console.log(resort);
+    var resortj = resortJson;
+    console.log(resort.runs, resortj.skiers);
     return resort;
 
   }
@@ -119,7 +120,7 @@ var howMuchDidItSnow = {
 
 
 // Main Code
-howMuchDidItSnow.resorts(skiObject); // Main Var Object passed through function
+howMuchDidItSnow.resorts(skiObject, skierInfo); // Main Var Object passed through function
 console.log(skierInfo.skiers[1].skierFirstName + " and " + skierInfo.skiers[0].skierFirstName + " Have decided to go skiing today. Let's check if it snowed."); //JSON
 didItSnow.snow(true); //Method Procedure
 var newSnow = howMuchDidItSnow.howMuchSnow(15); //Number
