@@ -8,6 +8,13 @@
 // Global Variables
 var skiDecision = "we need to check how many inches and see if the roads are clear to decide where we are going to ski today.";
 var slopes = ["The Wall", " Sentinal Bowl", " Cornice"];
+var skiObject = {
+    
+    DiamondPeak: "Awesome",
+    lifts: 22,
+    runs: 115
+
+};
 
 // JSON
 var skierInfo = {
@@ -99,12 +106,20 @@ var howMuchDidItSnow = {
       runs--; 
     }
     return slopeNames; 
+  },
+
+  resorts: function(resortObject) {
+    var resort = resortObject;
+    console.log(resort);
+    return resort;
+
   }
 
 }
 
 
 // Main Code
+howMuchDidItSnow.resorts(skiObject); // Main Var Object passed through function
 console.log(skierInfo.skiers[1].skierFirstName + " and " + skierInfo.skiers[0].skierFirstName + " Have decided to go skiing today. Let's check if it snowed."); //JSON
 didItSnow.snow(true); //Method Procedure
 var newSnow = howMuchDidItSnow.howMuchSnow(15); //Number
