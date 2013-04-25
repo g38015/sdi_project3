@@ -43,6 +43,10 @@ var didItSnow = {
             " Sentinal Bowl", 
             " Cornice"
             ],
+    objProperty: {
+            s: "a",
+            r: "b"
+            },
 
     snow: function (checkForSnow) { // Method: Procedure 
       if (checkForSnow === true)
@@ -120,6 +124,7 @@ var howMuchDidItSnow = {
 
 
 // Main Code
+console.log(didItSnow.objProperty);
 howMuchDidItSnow.resorts(skiObject, skierInfo); // Main Var Object passed through function
 console.log(skierInfo.skiers[1].skierFirstName + " and " + skierInfo.skiers[0].skierFirstName + " Have decided to go skiing today. Let's check if it snowed."); //JSON
 didItSnow.snow(true); //Method Procedure
