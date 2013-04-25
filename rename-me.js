@@ -48,8 +48,8 @@ var didItSnow = {
             " Cornice"
             ],
     objProperty: {
-            s: "a",
-            r: "b"
+            ski: "So Fun!",
+            run: "KT 22"
             },
 
     snow: function (checkForSnow) { // Method: Procedure 
@@ -119,7 +119,7 @@ var howMuchDidItSnow = {
   resorts: function(resortObject, resortJson) {
     var resort = resortObject;
     var resortj = resortJson;
-    console.log(resort.runs, resortj.skiers);
+    console.log(resort, resortj);
     return resort;
 
   }
@@ -128,8 +128,6 @@ var howMuchDidItSnow = {
 
 
 // Main Code
-console.log(didItSnow.objProperty);
-howMuchDidItSnow.resorts(skiObject, skierInfo); // Main Var Object passed through function
 console.log(skierInfo.skiers[1].skierFirstName + " and " + skierInfo.skiers[0].skierFirstName + " Have decided to go skiing today. Let's check if it snowed."); //JSON
 didItSnow.snow(true); //Method Procedure
 var newSnow = howMuchDidItSnow.howMuchSnow(15); //Number
@@ -142,5 +140,6 @@ console.log("It helped us make a decision knowing that it is " + areWeReady + " 
 var readyToSki = howMuchDidItSnow.getReady("Salomon", "Rossignol"); //String
 console.log(readyToSki);
 var decideRuns = howMuchDidItSnow.skiRuns(8, slopes); //Array
-console.log("Didn't quite finish our day. We added some extra runs including" + decideRuns[3] + " so we ended up missing " + decideRuns.length + " runs. Let's come back tomorrow:) and finish the remaining runs " + decideRuns + ".");
+console.log("Didn't quite finish our day. We added some extra runs including" + decideRuns[3] + " so we ended up missing " + decideRuns.length + " runs. Let's come back tomorrow:) and finish the remaining runs " + decideRuns + ". " + didItSnow.objProperty.ski);
+howMuchDidItSnow.resorts(skiObject, skierInfo); // Main Var Object and JSON passed through function
 
